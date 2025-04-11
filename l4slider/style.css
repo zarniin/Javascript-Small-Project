@@ -1,0 +1,142 @@
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 900px;
+}
+
+.carousel{
+    position: relative;
+}
+
+.carousel-indicatiors{
+    width: 100%;
+
+    /* background-color: steelblue; */
+    text-align: center;
+
+    list-style-type: none;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-53%);
+
+}
+
+.carousel-indicatiors .dot{
+    width: 8px;
+    height: 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+
+    display: inline-block;
+
+    cursor: pointer;
+
+    margin: 0px 2px;
+}
+
+.carousel-indicatiors .dot:hover,.carousel-indicatiors .active{
+    background-color: #888;
+}
+
+.carousel-inner{
+    background-color: #f4f4f4;
+}
+
+.carousel-item{
+    text-align: center;
+    padding: 100px;
+
+    display: none;
+}
+
+.carousel-item .user{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.carousel-item .jobtitle{
+    letter-spacing: 2px;
+}
+
+.carousel-item .contact-btn{
+    background-color: steelblue;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+
+    padding: 10px;
+}
+
+.carousel-control-prev,.carousel-control-next{
+    /* background-color: steelblue; */
+    color: #f4f4f4;
+    font-size: 25px;
+
+    padding: 20px;
+
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev{
+    left: 0;
+}
+
+.carousel-control-next{
+    right: 0;
+}
+
+.carousel-control-prev:hover{
+    color: #888;
+
+    animation-name: forleft;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.carousel-control-next:hover{
+    color: #888;
+
+    animation-name: forright;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes forleft{
+    from{
+        left: 0;
+        opacity: 0.5;
+    }
+
+    to{
+        left: 10px;
+        opacity: 1;
+    }
+}
+
+@keyframes forright{
+    from{
+        right: 0;
+        opacity: 0.5;
+    }
+
+    to{
+        right: 10px;
+        opacity: 1;
+    }
+}
+
+
