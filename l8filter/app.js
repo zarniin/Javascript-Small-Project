@@ -68,7 +68,7 @@ function sortazm1btn(){
     }
 
     // console.log(lis);
-    // console.log(lis.sort());
+    console.log(lis.sort());
     // console.log(lis.reverse());
     // console.log(lis.sort().reverse());
 
@@ -139,14 +139,91 @@ function sortzam1btn(){
 
 // Method 2  A to Z 
 
+// console.log(getlis[0].textContent.toLowerCase());// aung aung
+// console.log(getlis[1].textContent.toLowerCase());// maung maung
+
+// if(getlis[0].textContent.toLowerCase() > getlis[1].textContent.toLowerCase()){
+//     console.log(true);
+// }else if(getlis[0].textContent.toLowerCase() === getlis[1].textContent.toLowerCase()){
+//     console.log('equal');
+// }else{
+//     console.log(false);
+// }
+
+// show 
+// a < z 
+
 function sortazm2btn(){
-    console.log('Method 2 AZ');
+    // console.log('Method 2 AZ');
+
+    var shouldswitch = true;
+    var switching = true;
+
+    // console.log(getlis.length);// 28
+
+    while(switching){
+
+        switching = false;
+
+        var i;
+
+        for(i = 0; i < getlis.length-1; i++){
+            // console.log(i);// 0 to 27
+
+            shouldswitch = false;
+
+            if(getlis[i].textContent.toLowerCase() > getlis[i+1].textContent.toLowerCase()){
+                shouldswitch = true;
+                break;
+            }
+        }
+
+        // console.log(i);//0
+
+        if(shouldswitch){
+            // parent.insertBefore(new,exist) 
+            getlis[i].parentNode.insertBefore(getlis[i+1],getlis[i]);
+            switching = true;
+        }
+    }
+
 }
 
 // Method 2  Z to A 
 
 function sortzam2btn(){
-    console.log('Method 2 ZA');
+    // console.log('Method 2 ZA');
+
+    var shouldswitch = true;
+    var switching = true;
+
+    // console.log(getlis.length);// 28
+
+    while(switching){
+
+        switching = false;
+
+        var i;
+
+        for(i = 0; i < getlis.length-1; i++){
+            // console.log(i);// 0 to 27
+
+            shouldswitch = false;
+
+            if(getlis[i].textContent.toLowerCase() < getlis[i+1].textContent.toLowerCase()){
+                shouldswitch = true;
+                break;
+            }
+        }
+
+        // console.log(i);//0
+
+        if(shouldswitch){
+            // parent.insertBefore(new,exist) 
+            getlis[i].parentNode.insertBefore(getlis[i+1],getlis[i]);
+            switching = true;
+        }
+    }
 }
 
 
