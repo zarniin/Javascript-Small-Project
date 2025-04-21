@@ -11,27 +11,80 @@ getform.addEventListener('submit',(e) => {
     e.preventDefault();
 });
 
-function addnew(){
-    // console.log('hi');
+var gettodos = JSON.parse(localStorage.getItem('todos'));
+
+if(gettodos){
+    // Method 1 
+    // gettodos.forEach(function(gettodo){
+    //     console.log(gettodo);
+    // addnew(getodo);
+    // });
+
+    // Method 2 
+    // gettodos.forEach(gettodo=>{
+    //     // console.log(gettodo);
+    //     addnew(gettodo);
+    // });
+
+    // Method 3 
+    gettodos.forEach(gettodo=>addnew(gettodo));
+}
+
+function addnew(gettodo){
 
     let todotext = gettextbox.value;
 
-    const li = document.createElement('li');
-    li.appendChild(document.createTextNode(todotext));
-    getul.appendChild(li);
-    gettextbox.value = "";
-    gettextbox.focus();
+    if(gettodo){
+        todotext = gettodo.text;
+    }
 
-    li.addEventListener('click',function(){
-        li.classList.toggle('completed');
+    if(todotext){
+        const li = document.createElement('li');
+
+        if(gettodo && gettodo.done){
+            li.classList.add('completed');
+        }
+        li.appendChild(document.createTextNode(todotext));
+        getul.appendChild(li);
+        gettextbox.value = "";
+        gettextbox.focus();
+
+        updatelocalStorage();
+
+        li.addEventListener('click', function () {
+            li.classList.toggle('completed');
+            updatelocalStorage();
+        });
+
+        li.addEventListener('contextmenu', function (e) {
+            li.remove();
+            updatelocalStorage();
+            e.preventDefault();
+        });
+    }
+
+}
+
+function updatelocalStorage(){
+    
+    var getalllis = document.querySelectorAll('li');
+    // console.log(getalllis);
+
+    const todos = [];
+
+    getalllis.forEach(getallli =>{
+        // console.log(getallli.textConent);
+
+        todos.push({
+            text: getallli.textContent,
+            done: getallli.classList.contains('completed')
+        });
     });
 
-    li.addEventListener('contextmenu',function(e){
-        li.remove();
+    console.log(todos);
 
-        e.preventDefault();
-    });
-
+    localStorage.setItem('todos',JSON.stringify(todos));
+ 
 }
 
 
