@@ -168,7 +168,7 @@ function sortazm2btn(){
         var i;
 
         for(i = 0; i < getlis.length-1; i++){
-            // console.log(i);// 0 to 27
+            console.log(i);// 0 to 27
 
             shouldswitch = false;
 

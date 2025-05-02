@@ -63,7 +63,6 @@ body{
 .modal .modal-img,.modal .caption{
     animation-name: myani;
     animation-duration: .6s;
-
 }
 
 @keyframes myani{
