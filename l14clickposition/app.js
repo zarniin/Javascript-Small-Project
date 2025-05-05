@@ -1,52 +1,57 @@
 // Get UI 
-const getimageboxes = document.querySelectorAll('.imgbox');
+const getmap = document.querySelector('.map-container');
 
-getimageboxes.forEach(function(getimagebox,idx){
-    // console.log(getimagebox);
+let getsmallcolor = document.getElementById('smallcolor'),
+    getmediumcolor = document.getElementById('mediumcolor'),
+    getlargecolor = document.getElementById('largecolor');
 
-    getimagebox.addEventListener('click',function(){
-        // console.log(this);
-        // console.log(idx);
+let circleidx = 0;
 
-        showbox(idx);
-    });
-});
-
-function showbox(idx){
-    console.log("from parameter is = ",idx);
+getmap.addEventListener('click',function(e){
     
-    getimageboxes.forEach(function(imagebox,curidx){
-        // console.log('current id = ',curidx);
+    // console.log('i am working');
 
-        if(idx === curidx){
-            imagebox.classList.add('show');
+    circleidx++;
 
-            imagebox.addEventListener('click',function(e){
+    // console.log(circleidx);
 
-                // console.log(e.target);
+    // console.log(e.target);
 
-                if(e.target.className === "btn-close"){
-                    // console.log('hi');
-                    imagebox.classList.remove('show');
-                }
+    if(e.target.classList.contains('map-container')){
+        const offx = e.offsetX;
+        const offy = e.offsetY;
 
-                if(e.target.classList.contains('btn')){
-                    // console.log('hay');
-                    // const getsubbtn = getimageboxes[idx].querySelector('.btn');
-                    const getsubbtn = imagebox.querySelector('.btn');
-                    getsubbtn.textContent = "Subscribed";
-                }
-                
-            });
+         // console.log(offx,offy);
 
+        const newspan = document.createElement('span');
+        newspan.id = circleidx;
+        newspan.classList.add('circle');
 
-        }else{
-            imagebox.classList.remove('show');
+        newspan.style.left = `${offx}px`;
+        newspan.style.top = `${offy}px`;
+
+        // newspan.style.setProperty('--small-color','darkblue');
+        // newspan.style.setProperty('--medium-color','steelblue');
+        // newspan.style.setProperty('--large-color','skyblue');
+
+        if(getsmallcolor.selectedIndex > 0 && getmediumcolor.selectedIndex > 0 && getlargecolor.selectedIndex > 0){
+            newspan.style.setProperty('--small-color',getsmallcolor.value);
+            newspan.style.setProperty('--medium-color',getmediumcolor.value);
+            newspan.style.setProperty('--large-color',getlargecolor.value);
         }
 
-    });
+        // console.log(newspan);
 
-}
+        this.appendChild(newspan);
+
+    }
+
+
+
+
+});
+
+
 
 
 
