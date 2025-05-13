@@ -35,7 +35,7 @@ label img{
 
 label img:hover{
     opacity: 0.8;
-    filter: blur(1.5px)
+    filter: blur(1.5px);
 }
 
 .btn{
@@ -60,6 +60,8 @@ label img:hover{
     box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
     transform: scale(1.1);
 }
+
+
 
 
 

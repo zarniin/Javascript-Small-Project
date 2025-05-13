@@ -60,7 +60,7 @@ startquestion();
 
 function startquestion(){
 
-    removeselected();
+    // removeselected();
 
     const currentqes = database[currentidx];
 
@@ -80,7 +80,7 @@ function getsingleinput(){
         // console.log(getinput.id);
 
         if(getinput.checked){
-            // console.log(getinput.id);
+            console.log(getinput.id);
 
             answer = getinput.id;
             
@@ -92,6 +92,8 @@ function getsingleinput(){
     // console.log(answer);
     return answer;
 }
+
+getsingleinput();
 
 getbtn.addEventListener('click',function(){
     // console.log('hay');
@@ -122,7 +124,8 @@ getbtn.addEventListener('click',function(){
             getcontainer.innerHTML = `
                 <h3>Total Score : ${sorce*25}</h3>
                 <h4>You answered correclty at ${sorce}/${database.length} questions.</h4>
-                <button type="button" class="btn" ondblclick="window.location.reload()">Double Clike to Reoad</button>
+                <!-- <button type="button" class="btn" ondblclick="window.location.reload()">Double Clike to Reoad</button> -->
+                <button type="button" class="btn" onclick="doubleclick()">Double Clike to Reoad</button>
             `;
         }
 
@@ -141,6 +144,32 @@ function removeselected(){
         return getinput.checked = false;
 
     });
+}
+
+let clicktimes = 0;
+
+function doubleclick(){
+    // console.log('hay');
+
+    if(clicktimes === 0){
+
+        clicktimes = Date.now();
+        // console.log(clicktimes);
+
+    }else{
+
+        if((Date.now() - clicktimes) < 1000){
+
+            window.location.reload();
+            clicktimes = 0;
+
+        }else{
+
+            clicktimes = Date.now();
+            // console.log(clicktimes);
+        }
+
+    }
 }
 
 
