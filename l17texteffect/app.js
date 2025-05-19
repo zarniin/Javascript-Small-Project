@@ -111,7 +111,7 @@ function deleteword(){
 
 showwords(languages[genfun.next().value]);// showwords("Nodejs");
 
-gettxtlights.forEach(function(gettxtlight,idx){
+gettxtlights.forEach(function(gettxtlight){
     // console.log(gettxtlight);
 
     let arrtexts = gettxtlight.innerHTML.split("");
