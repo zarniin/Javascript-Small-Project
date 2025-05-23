@@ -30,7 +30,7 @@ carousel(currslide);
 
 function carousel(slidenum){
     // currslide 1 to 3 & 3 to 1 
-    // console.log(slidenum);
+    // console.log(slidenum); // 1
 
     var x,y;
 
