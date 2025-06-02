@@ -60,7 +60,7 @@ startquestion();
 
 function startquestion(){
 
-    // removeselected();
+    removeselected();
 
     const currentqes = database[currentidx];
 

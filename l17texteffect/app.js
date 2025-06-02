@@ -115,7 +115,7 @@ gettxtlights.forEach(function(gettxtlight){
     // console.log(gettxtlight);
 
     let arrtexts = gettxtlight.innerHTML.split("");
-    console.log(arrtexts);
+    // console.log(arrtexts);
 
     gettxtlight.innerHTML = "";
 

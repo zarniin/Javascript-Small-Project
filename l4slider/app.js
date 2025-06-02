@@ -44,7 +44,7 @@ function carousel(slidenum){
                                             // replace(searchvalue,replacevalue) 
         dots[y].className = dots[y].className.replace('active',"");
     }
-
+x
     if(slidenum > slides.length){
         currslide = 1;
     }else if(slidenum < 1){
@@ -64,7 +64,7 @@ function carousel(slidenum){
 for(var q=0;q < dots.length;q++){
 
     dots[q].addEventListener('click',function(){
-        console.log('hay');
+        // console.log('hay');
         // console.log(this.getAttribute('data-bs-slide-to'));
 
         currslide = this.getAttribute('data-bs-slide-to');

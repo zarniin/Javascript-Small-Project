@@ -33,8 +33,12 @@ body{
 
 .logo .visalogo{
     width: 100px;
-    margin-bottom: 20px;
-    opacity: .8;
+    opacity: .9;
+    margin-bottom: 10px;
+}
+
+input::placeholder{
+    color: #bbb;
 }
 
 .form-group{
@@ -44,31 +48,27 @@ body{
 label{
     display: block;
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .form-control{
     height: 25px;
-    background: none;
+    background: transparent;
+    border: none;
     color: #fff;
     font-size: 12px;
-    border: 0;
 }
 
 .form-control:focus{
     outline: none;
 }
 
-.form-control::placeholder{
-    color: #bbb;
-}
-
 .card-number{
     margin-bottom: 30px;
 
-    overflow: hidden;
-
     position: relative;
+
+    overflow: hidden;
 }
 
 input[id="card-digit"]{
@@ -76,10 +76,6 @@ input[id="card-digit"]{
     height: 50px;
     font-size: 30px;
 }
-
-/* input[id="card-digit"]:hover{
-    border-bottom: 2px solid #fff;
-} */
 
 .underline{
     width: 100%;
@@ -90,7 +86,7 @@ input[id="card-digit"]{
     left: -100%;
     bottom: 0;
 
-    transition: left .3s ease-in;
+    transition: left .5s ease;
 }
 
 .card-number input[id="card-digit"]:hover + .underline,
@@ -100,16 +96,16 @@ input[id="card-digit"]{
 
 .card-holder{
     width: 50%;
-    padding: 0 50px 0 0;
+
+    overflow: hidden;
 
     position: relative;
-    overflow: hidden;
 }
 
-input[id="card-name"]{
-    width: 108px;
+#card-name{
+    width: 120px;
     height: 25px;
-    margin-right: 60px;
+    margin-right: 30px;
 }
 
 .card-holder input[id="card-name"]:hover + .underline,
@@ -119,11 +115,11 @@ input[id="card-name"]{
 
 .card-date{
     width: 90px;
-    padding: 0;
-    margin-right: 60px;
+    margin-left: 60px;
+
+    overflow: hidden;
 
     position: relative;
-    overflow: hidden;
 }
 
 .card-date input[id="card-exp"]:hover + .underline,
@@ -134,15 +130,21 @@ input[id="card-name"]{
 .card-code{
     width: 70px;
     padding: 0;
+    margin-left: 60px;
+
+    overflow: hidden;
 
     position: relative;
-    overflow: hidden;
 }
 
 .card-code input[id="card-ccv"]:hover + .underline,
 .card-code input[id="card-ccv"]:focus + .underline{
     left: 0;
 }
+
+
+
+
 
 
 

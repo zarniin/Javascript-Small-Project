@@ -104,7 +104,7 @@ function updateprogress(e){
     // Method 3 
     const {duration} = e.target;
     const {currentTime} = e.target;
-    console.log(duration,currentTime);
+    // console.log(duration,currentTime);
 
     if(currentTime === 0){
         getprogressbar.style.width = "0%";

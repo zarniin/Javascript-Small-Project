@@ -8,7 +8,7 @@ body{
 
 	position: static;
 
-	/* -webkit-print-color-adjust: exact; */
+	-webkit-print-color-adjust: exact;
 }
 
 .content{

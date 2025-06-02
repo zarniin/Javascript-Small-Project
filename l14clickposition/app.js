@@ -21,7 +21,7 @@ getmap.addEventListener('click',function(e){
         const offx = e.offsetX;
         const offy = e.offsetY;
 
-         // console.log(offx,offy);
+        // console.log(offx,offy);
 
         const newspan = document.createElement('span');
         newspan.id = circleidx;

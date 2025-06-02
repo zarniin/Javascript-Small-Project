@@ -33,8 +33,8 @@ function showbox(idx){
                 if(e.target.classList.contains('btn')){
                     // console.log('hay');
                     // const getsubbtn = getimageboxes[idx].querySelector('.btn');
-                    const getsubbtn = imagebox.querySelector('.btn');
-                    getsubbtn.textContent = "Subscribed";
+                    // const getsubbtn = imagebox.querySelector('.btn');
+                    // getsubbtn.textContent = "Subscribed";
                 }
                 
             });

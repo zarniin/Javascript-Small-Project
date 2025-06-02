@@ -12,6 +12,7 @@ getform.addEventListener('submit',(e) => {
 });
 
 var gettodos = JSON.parse(localStorage.getItem('todos'));
+// console.log(typeof gettodos);
 
 if(gettodos){
     // Method 1 
