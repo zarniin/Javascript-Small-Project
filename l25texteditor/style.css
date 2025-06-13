@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: auto;
+    background-color: #f4f4f4;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.3);
+
+    border: 1px solid #fff;
+
+    padding: 10px;
+}
+
+h4{
+    color: steelblue !important; 
+    text-align: center;
+}
+
+button{
+    margin: 20px 10px !important;
+}
+
+button:hover{
+    background-color: steelblue !important;
+}
+
+.divarea{
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    text-align: justify;
+    border: 1px solid steelblue;
+
+    padding: 10px !important;
+
+    overflow-y: scroll;
+}
+
+
+
+

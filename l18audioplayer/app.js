@@ -112,7 +112,7 @@ function updateprogress(e){
         const progresspercent = (currentTime/duration) * 100;
         // console.log(progresspercent);
 
-         getprogressbar.style.width = `${progresspercent}%`;
+        getprogressbar.style.width = `${progresspercent}%`;
     }
 
     // forward 

@@ -16,7 +16,6 @@ const gettitle = document.getElementById('title');
 
 const getopenfullscreen = document.getElementById('openfullscreen'),
       getclosefullscreen = document.getElementById('closefullscreen');
-      console.log(getopenfullscreen);
 
 
 const vidoes = ['samplevideo1','samplevideo2'];
